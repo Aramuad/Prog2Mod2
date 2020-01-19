@@ -1,4 +1,4 @@
-package Lab_2A;
+package lab_2A;
 
 public class Person {
 	protected String name, address, email, phone;
