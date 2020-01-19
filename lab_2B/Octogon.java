@@ -1,9 +1,7 @@
 package lab_2B;
 
-import lab_2B.GeometricObject.Clonable;
-
 final class Octagon extends GeometricObject
-implements Clonable, Comparable<Octagon> {
+implements Cloneable, Comparable<Octagon> {
 		
 	Octagon() {
 	}

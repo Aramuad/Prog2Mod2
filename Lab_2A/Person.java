@@ -126,6 +126,6 @@ class MyDate {
 		this.year = year;
 	}
 	public String allData() {
-		return day + " " + month + " " + year;
+		return "MyDate: " + day + " " + month + " " + year;
 	}
 }

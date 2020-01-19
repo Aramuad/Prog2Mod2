@@ -1,7 +1,7 @@
 package lab_2B;
 
 public abstract class GeometricObject {
-	interface Clonable {
+	interface Cloneable {
 	}
 	interface Comparable {
 	}
