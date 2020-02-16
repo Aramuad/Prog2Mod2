@@ -1,15 +1,15 @@
-package lab_2B;
+//Sam Ballard
+
+package lab4;
 
 final class Octagon extends GeometricObject
 implements Cloneable, Comparable<Octagon> {
 		
 	Octagon() {
+		side = 8;
 	}
 	Octagon(int side) {
-		setSide(side);
-	}
-	public void calcPerimeter() {
-		perimeter = side * 8;
+		this.side= side ;
 	}
 	public void calcArea() {
 		area = (2 + 4 / Math.sqrt(2)) * side * side;
@@ -17,30 +17,21 @@ implements Cloneable, Comparable<Octagon> {
 	public int getSide() {
 		return side;
 	}
-	public int getPerimeter() {
-		return perimeter;
-	}
 	public double getArea() {
 		return area;
 	}
 	public Object clone() throws CloneNotSupportedException {
 		return super.clone();
 	}
-	public boolean booleanCompareTo(int compareTo) {
-		if (compareTo == 1) {
-			return true;
-		} else {
-			return false;
-		}
-	}
 	public int compareTo(Octagon temp) {
-		int eval;
-		Octagon other = (Octagon) temp;
-		if (getSide() == other.getSide() && getPerimeter() == other.getPerimeter()
-				&& getArea() == other.getArea()) {
-			eval = 1;
-		} else {
+		int eval = 0;
+		Octagon other = (Octagon)temp;
+		if (getSide() == other.getSide() && getArea() == other.getArea()) {
 			eval = 0;
+		} else if (getSide() < other.getSide()){
+			eval = 1;
+		} else if (getSide() > other.getSide()) {
+			eval = -1;
 		}
 		return eval;
 	}
